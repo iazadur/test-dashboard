@@ -9,7 +9,6 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
-import { useAppSelector } from "@/redux/lib/hooks";
 
 const { Header, Sider, Content } = Layout;
 
@@ -22,9 +21,6 @@ const AntdLayout: React.FC<AntdLayoutProps> = ({ children }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-
-  const state = useAppSelector((state) => state.counter);
-  console.log("state", state);
 
   return (
     <Layout>
